@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "hexlet-django-blog"
 version = "0.1.0"
-description = ""
-authors = ["vitallcore"]
+description = "My first Django project try"
+authors = ["vitallcore <vitaslipknot@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
