@@ -1,3 +1,5 @@
-from django.shortcuts import render
+# hexlet_django_blog/article/views.py
+from django.http import HttpResponse
 
-# Create your views here.
+def index(request):
+    return HttpResponse('article')
