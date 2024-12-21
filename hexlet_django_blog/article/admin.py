@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Article
+
+
+class ArticleAdmin(admin.ModelAdmin):
+    search_fields = ['name', 'body']
+
+
+admin.site.register(Article, ArticleAdmin)

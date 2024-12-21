@@ -1,6 +1,7 @@
 # hexlet_django_blog/article/models.py
 from django.db import models
 
+
 class Article(models.Model):
     name = models.CharField(max_length=200)
     body = models.TextField()
