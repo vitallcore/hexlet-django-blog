@@ -1,4 +1,7 @@
 __pycache__
 *.sqlite3
-.venv
+.venv/
 .ruff_cache
+htmlcov/
+.env
+.coverage

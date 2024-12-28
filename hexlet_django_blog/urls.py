@@ -1,8 +1,7 @@
-"""
-URL configuration for hexlet_django_blog project.
+"""python_django_blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,16 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
-from django.urls import path, include
-from hexlet_django_blog import views
-from .views import IndexView
-from hexlet_django_blog.views import index
+from django.urls import include, path
+from python_django_blog import views
 
 urlpatterns = [
-    path('', index, name='index'),
-    path('about/', views.about),
-    path('articles/', include('hexlet_django_blog.article.urls')),
-    path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='index'),
+    path('', views.IndexView.as_view(), name='root'),
+    path('about/', views.AboutView.as_view(), name='about'),
+    path('articles/', include('python_django_blog.articles.urls')),
 ]
